@@ -1,0 +1,1 @@
+UPDATE PRODUCTOS SET nombre_producto = '@nombre_producto' WHERE id_producto = @id

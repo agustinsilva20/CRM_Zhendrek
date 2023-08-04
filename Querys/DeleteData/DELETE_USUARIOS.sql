@@ -1,0 +1,1 @@
+DELETE FROM USUARIOS WHERE id_usuarios = @id

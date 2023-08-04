@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS PRODUCTOS (
+             id_producto INTEGER PRIMARY KEY AUTOINCREMENT,
+             nombre_producto VARCHAR(20) NOT NULL)

@@ -1,0 +1,1 @@
+DELETE FROM GASTOS WHERE id_gasto = @id
