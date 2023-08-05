@@ -1,5 +1,6 @@
 import sqlite3
 import os
+from bd_querys import GET_ALL
 
 
 def crearTablas(cursor):
@@ -96,24 +97,7 @@ def actualizar(tabla, array_columnas, array_valores, id):
         conn.close()
         print(f'[OK] Se modifico data correctamente en la tabla: {tabla}')
 
-def GET_ALL(tabla):
-    tablas = ["USUARIOS","PRODUCTOS","VENTAS","GASTOS","SALARIOS", "PAGO_SALARIOS","VACACIONES" ]
 
-    if not tabla in tablas:
-        print(f'[ERROR] No se pudo hacer un select a la tabla {tabla} ya que esta NO existe.')
-        return 
-    
-    conn = sqlite3.connect('./crm.db')
-    c = conn.cursor()
-    # Ejecutar una consulta SELECT
-    c.execute(f'SELECT * FROM {tabla}')
-
-    # Obtener los resultados de la consulta
-    resultados = c.fetchall()
-
-    conn.close()
-    
-    return resultados
 
 def mockdata():
     array_usuarios = ["@nombre_usuario", "@mail", "@password","@active", "@isCeo", "@isAdmin"]
